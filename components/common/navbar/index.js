@@ -16,7 +16,7 @@ export default function Footer() {
               <a href="#" className="font-medium mr-8 text-gray-500 hover:text-gray-900">Marketplace</a>
             </div>
             <div>
-              <a href="#" className="font-medium mr-8 text-gray-500 hover:text-gray-900">Company</a>
+              <a href="#" className="font-medium mr-8 text-gray-500 hover:text-gray-900">Andou LLC</a>
               <a href="#" className="font-medium mr-8 text-gray-600 hover:text-gray-500">Log in</a>
             </div>
           </div>

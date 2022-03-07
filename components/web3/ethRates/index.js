@@ -15,7 +15,7 @@ export default function EthRates() {
           <div>
             <span className="text-2xl font-bold">0.004769 = 15$</span>
           </div>
-          <p className="text-xl text-gray-500">Price per course</p>
+          <p className="text-xl text-gray-500">Eth per Dollar</p>
         </div>
       </div>
     </div>
