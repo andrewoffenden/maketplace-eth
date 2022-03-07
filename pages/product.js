@@ -1,15 +1,15 @@
 import { Modal } from "@components/common";
 import {
-  CourseHero,
+  ProductHero,
   Curriculum,
   Keypoints
-} from "@components/course";
+} from "@components/product";
 
-export default function Course() {
+export default function Product() {
 
   return (
     <div className="relative max-w-7xl mx-auto px-4">
-      <CourseHero />
+      <ProductHero />
       <Keypoints />
       <Curriculum />
       <Modal />
