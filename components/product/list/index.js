@@ -1,20 +1,38 @@
 
+import Image from "next/image"
+import Link from "next/link"
 
-
-
-export default function List() {
+export default function List({products}) {
   return (
-    <section className="grid grid-cols-2 gap-4 mt-5 mb-5">
-      {Array.from({ length: 4 }).map((_, i) =>
-        <div key={i} className="bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-          <div className="md:flex">
-            <div className="md:flex-shrink-0">
-              <img className="h-48 w-full object-cover md:w-48" src="https://images.unsplash.com/photo-1515711660811-48832a4c6f69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Man looking at item at a store" />
+    <section className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-5 mb-5 ">
+      {products.map((product) =>
+        <div key={product.id} className="bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+          <div className="flex flex-col md:flex-row h-full">
+            <div className="flex h-full">
+              <Image
+                className="object-cover"
+                src={product.coverImage}
+                layout="fixed"
+                width="200"
+                height="220"
+                alt={product.title}
+              />
             </div>
             <div className="p-8">
-              <div className="uppercase tracking-wide text-sm text-gray-500 font-semibold">Product</div>
-              <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Product Link</a>
-              <p className="mt-2 text-gray-500">Product description blerb here.  Amet eu laboris ut aliquip reprehenderit ipsum nostrud.</p>
+              <div
+                className="uppercase tracking-wide text-sm text-gray-500 font-semibold">
+                {product.type}
+              </div>
+              <Link href={`/products/${product.slug}`}>
+                <a
+                  className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+                  {product.title}
+              </a>
+              </Link>
+              <p
+                className="mt-2 text-gray-500">
+                {product.description}
+              </p>
             </div>
           </div>
         </div>

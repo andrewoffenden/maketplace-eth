@@ -1,22 +1,42 @@
 
 
+import Link from "next/link"
 
 
-
-export default function Footer() {
+export default function Navbar() {
 
   return (
-    <section className="bg-gray-300">
+    <section className="bg-white">
       <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
         <nav className="relative" aria-label="Global">
           <div className="flex justify-between">
             <div>
-              <a href="#" className="font-medium mr-8 text-gray-500 hover:text-gray-900">Product</a>
-              <a href="#" className="font-medium mr-8 text-gray-500 hover:text-gray-900">Features</a>
-              <a href="#" className="font-medium mr-8 text-gray-500 hover:text-gray-900">Marketplace</a>
+              <Link href="/">
+                <a
+                  className="font-medium mr-8 text-gray-500 hover:text-gray-900">
+                  Home
+                </a>
+              </Link>
+              <Link href="/">
+                <a
+                  className="font-medium mr-8 text-gray-500 hover:text-gray-900">
+                  Marketplace
+                </a>
+              </Link>
+              <Link href="/">
+                <a
+                  className="font-medium mr-8 text-gray-500 hover:text-gray-900">
+                  Blogs
+                </a>
+              </Link>
             </div>
             <div>
-              <a href="#" className="font-medium mr-8 text-gray-500 hover:text-gray-900">Andou LLC</a>
+            <Link href="">
+                <a
+                  className="font-medium mr-8 text-gray-500 hover:text-gray-900">
+                  Wishlist
+                </a>
+              </Link>
               <a href="#" className="font-medium mr-8 text-gray-600 hover:text-gray-500">Log in</a>
             </div>
           </div>
