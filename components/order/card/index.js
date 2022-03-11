@@ -33,7 +33,7 @@ export default function Card() {
             </dd>
           </div>
           <div className="bg-white px-4 py-5 sm:px-6">
-            <div className="bg-blue-100 rounded-xl mb-3">
+            <div className="bg-teal-100 rounded-xl mb-3">
               <div className="max-w-7xl mx-auto py-3 px-3 sm:px-3 lg:px-3">
                 <div className="flex items-center justify-between flex-wrap">
                   <div className="w-0 flex-1 flex items-center">

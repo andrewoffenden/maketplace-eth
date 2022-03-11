@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function List({products}) {
+export default function ProductsList({products}) {
   return (
     <section className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-5 mb-5 ">
       {products.map((product) =>

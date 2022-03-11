@@ -9,7 +9,8 @@ const lectures = [
   "Safe operator",
 ]
 
-export default function Curriculum() {
+export default function Curriculum({locked}) {
+  const statusColor = locked ? `bg-rose-200 text-gray-600` : `bg-teal-100 text-gray-600`
 
   return (
     <section className="max-w-5xl mx-auto">
@@ -44,12 +45,16 @@ export default function Curriculum() {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-green-800">
-                          Unlocked
+                        <span
+                          className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusColor}`}>
+                          { locked ? "Locked" : "Unlocked" }
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="#" className="text-gray-600 hover:text-indigo-900">Play</a>
+                        <a
+                          href="#" className="text-gray-600 hover:text-indigo-900">
+                          { locked ? "Get Access" : "Play" }
+                        </a>
                       </td>
                     </tr>
                   )}

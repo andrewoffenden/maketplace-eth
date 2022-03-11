@@ -9,10 +9,10 @@ export default function Home({products}) {
   return (
     <>
       <Hero />
-      {/* <Breadcrumbs />
+      <Breadcrumbs />
       <WalletBar />
       <EthRates />
-      <OrderCard /> */}
+      <OrderCard />
       <ProductList  products={products} />
     </>
   )

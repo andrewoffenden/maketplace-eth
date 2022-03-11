@@ -1,7 +1,5 @@
 
-
 import Link from "next/link"
-
 
 export default function Navbar() {
 
@@ -37,7 +35,11 @@ export default function Navbar() {
                   Wishlist
                 </a>
               </Link>
-              <a href="#" className="font-medium mr-8 text-gray-600 hover:text-gray-500">Log in</a>
+                <a
+                  href="#"
+                  className="rounded-md px-8 py-3 text-base font-medium text-white bg-teal-400 hover:bg-teal-600">
+                  Connect
+                </a>
             </div>
           </div>
         </nav>
