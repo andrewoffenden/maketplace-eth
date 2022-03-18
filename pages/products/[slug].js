@@ -1,10 +1,10 @@
-import { BaseLayout } from "@components/layout";
-import { Modal } from "@components/common";
+import { BaseLayout } from "@components/ui/layout";
+import { Modal } from "@components/ui/common";
 import {
   ProductHero,
   Curriculum,
   Keypoints
-} from "@components/product";
+} from "@components/ui/product";
 import { getAllProducts } from "@content/products/fetcher";
 
 export default function Product({product}) {

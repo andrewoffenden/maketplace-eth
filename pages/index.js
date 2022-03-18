@@ -1,10 +1,10 @@
-import { BaseLayout } from "@components/layout"
-import { Hero, Breadcrumbs } from "@components/common"
-import { ProductList } from "@components/product"
-import { OrderCard } from "@components/order"
-import { EthRates, WalletBar } from "@components/web3"
+import { BaseLayout } from "@components/ui/layout"
+import { Hero, Breadcrumbs } from "@components/ui/common"
+import { ProductList } from "@components/ui/product"
+import { OrderCard } from "@components/ui/order"
+import { EthRates, WalletBar } from "@components/ui/web3"
 import { getAllProducts } from "@content/products/fetcher"
-
+import { useWeb3 } from "@components/providers"
 export default function Home({products}) {
   return (
     <>
