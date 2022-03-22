@@ -69,6 +69,8 @@ export default function Web3Provider({children}) {
   )
 }
 
+//fetches hooks set up in setupHooks.js expects a callback that will accept the hooks
+//object and return a hook.
 export function useHooks(cb) {
   const { getHooks } = useWeb3()
   const hooks = getHooks()
