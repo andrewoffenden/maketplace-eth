@@ -4,15 +4,14 @@ import { ProductList } from "@components/ui/product"
 import { OrderCard } from "@components/ui/order"
 import { EthRates, WalletBar } from "@components/ui/web3"
 import { getAllProducts } from "@content/products/fetcher"
-import { useWeb3 } from "@components/providers"
 export default function Home({products}) {
   return (
     <>
       <Hero />
-      <Breadcrumbs />
+      {/* <Breadcrumbs />
       <WalletBar />
       <EthRates />
-      <OrderCard />
+      <OrderCard /> */}
       <ProductList  products={products} />
     </>
   )

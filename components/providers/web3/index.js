@@ -7,6 +7,7 @@ import {
 } from 'react'
 import detectEthereumProvider from '@metamask/detect-provider'
 import Web3 from 'web3'
+import { setupHooks } from './hooks/setupHooks'
 
 
 const Web3Context = createContext(null)
@@ -42,12 +43,16 @@ export default function Web3Provider({children}) {
 
   //recompute memoized value only when one of the dependencies has changed.
   const _web3Api = useMemo(()=> {
+    const { web3, provider } = web3Api
+
     return {
       ...web3Api,
-      connect: web3Api.provider ?
+      isWeb3Loaded: web3 != null,
+      getHooks: () => setupHooks(web3),
+      connect: provider ?
         async () => {
           try {
-            await web3Api.provider.request({method: "eth_requestAccounts"})
+            await provider.request({method: "eth_requestAccounts"})
           } catch {
             location.reload()
           }
@@ -62,6 +67,13 @@ export default function Web3Provider({children}) {
     </Web3Context.Provider>
 
   )
+}
+
+export function useHooks(cb) {
+  const { getHooks } = useWeb3()
+  const hooks = getHooks()
+
+  return cb(hooks)
 }
 
 export function useWeb3() {
