@@ -1,9 +1,9 @@
 import { handler as createUseAccount } from "./useAccount"
 
 //returns an object whose keys are function names and values are functions.
-export const setupHooks = web3 => {
+export const setupHooks = (...deps) => {
 
   return {
-    useAccount: createUseAccount(web3)
+    useAccount: createUseAccount(...deps)
   }
 }
