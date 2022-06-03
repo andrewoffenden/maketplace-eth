@@ -43,11 +43,12 @@ export default function Web3Provider({children}) {
 
   //recompute memoized value only when one of the dependencies has changed.
   const _web3Api = useMemo(()=> {
-    const { web3, provider } = web3Api
+    const { web3, provider, isLoading } = web3Api
 
     return {
       ...web3Api,
-      isWeb3Loaded: web3 != null,
+      // isWeb3Loaded: web3 != null,
+      requireInstall: !isLoading && !web3,
       getHooks: () => setupHooks(web3, provider),
       connect: provider ?
         async () => {
