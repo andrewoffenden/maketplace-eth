@@ -5,7 +5,7 @@ export default function WalletBar({address, network}) {
   const {requireInstall} = useWeb3()
 
   return (
-    <section className="text-white bg-gray-400 rounded">
+    <section className="text-white bg-gray-400 rounded-lg">
       <div className="p-8">
         <h1 className="text-2xl">{address}</h1>
         <h2 className="subtitle mb-5 text-xl">I hope you are having a great day!</h2>

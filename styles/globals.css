@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.next-image-wrapper >span {
+  height: 100% !important;
+}
+.next-image-wrapper > img {
+  height: 100% !important;
+}
